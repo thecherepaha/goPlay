@@ -19,7 +19,7 @@ class Auth
         if(move_uploaded_file($avatar["tmp_name"],"uploads/avatars/" . $fileName)){
 
         }else{
-            Router::error(500);
+            Router::error('500');
         }
     }
 }
