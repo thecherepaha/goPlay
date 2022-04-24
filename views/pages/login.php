@@ -1,4 +1,5 @@
 <?php
+    $page_title = "Login";
     use App\Services\Page;
 ?>
 

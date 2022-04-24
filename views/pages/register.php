@@ -1,4 +1,5 @@
 <?php
+    $page_title = "Register";
     use App\Services\Page;
 ?>
 
