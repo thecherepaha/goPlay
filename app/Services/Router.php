@@ -36,7 +36,7 @@ class Router
 
                     $action = new $route["class"];
                     $method = $route["method"];
-                    $action -> $method();
+                    $action->$method($_POST);
                     die();
                 } else {
                     require_once "views/pages/" . $route['page'] . ".php";
