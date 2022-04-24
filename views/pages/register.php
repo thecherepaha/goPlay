@@ -15,7 +15,7 @@
     ?>
     <div class="container mt-4">
         <h2>Sign Up</h2>
-        <form method="POST" action="/auth/register" enctype="multipart/form-data">
+        <form method="post" action="/auth/register" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email">
