@@ -15,20 +15,36 @@ class Router
 
     }
 
+    public static function post($uri, $class, $method){
+
+        self::$list[] = [
+            "uri" => $uri,
+            "class" => $class,
+            "method" => $method,
+            "post" => true
+        ];
+
+    }
+
     public static function enable(){
 
         $query = $_GET['q'];
         
-
         foreach(self::$list as $route){
             if($route["uri"] === '/'. $query){
-                require_once "views/pages/" . $route['page'] . ".php";
-                die();
-            }
+                if($route["post"] === true){
+                    echo $_SERVER["REQUEST_METHOD"];
+                    $action = new $route["class"];
+                    $method = $route["method"];
+                    $action->$method();
+                } else {
+                    require_once "views/pages/" . $route['page'] . ".php";
+                    die();
+                } 
+            }            
         }
 
         self::page_not_found();
-
 
     }
 
