@@ -22,7 +22,7 @@ class Router
 
         foreach(self::$list as $route){
             if($route["uri"] === '/'. $query){
-                require_once "views/pages/" . $route['page'] . ".php" . "/";
+                require_once "views/pages/" . $route['page'] . ".php";
             }
         }
 
