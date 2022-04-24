@@ -20,7 +20,7 @@ class Auth
             //add
 
         }else{
-            Router::error('500');
+            Router::error(500);
         }
     }
 }
