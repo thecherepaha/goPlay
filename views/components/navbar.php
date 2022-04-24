@@ -12,8 +12,8 @@
 
             </div>
             <div class="navbar-nav ms-auto">
-                <a href="/login" class="nav-item nav-link active">Login</a>
-                <a href="/register" class="nav-item nav-link active">Register</a>
+                <a href="./login" class="nav-item nav-link active">Login</a>
+                <a href="./register" class="nav-item nav-link active">Register</a>
             </div>
         </div>
     </div>
