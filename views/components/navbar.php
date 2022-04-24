@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link">Home</a>
+                <a href="./" class="nav-item nav-link">Home</a>
 
             </div>
             <div class="navbar-nav ms-auto">
