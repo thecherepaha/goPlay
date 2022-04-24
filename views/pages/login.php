@@ -20,14 +20,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <a href="#" class="nav-item nav-link">Home</a>
                    
                 </div>
                 <div class="navbar-nav ms-auto">
-                    <a href="#" class="nav-item nav-link">Login</a>
+                    <a href="#" class="nav-item nav-link active">Login</a>
                 </div>
             </div>
         </div>
     </nav>
+
+
 </body>
 </html>
