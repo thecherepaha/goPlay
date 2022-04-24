@@ -21,8 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">Profile</a>
-                    <a href="#" class="nav-item nav-link">Messages</a>
+                   
                 </div>
                 <div class="navbar-nav ms-auto">
                     <a href="#" class="nav-item nav-link">Login</a>
