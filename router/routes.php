@@ -4,7 +4,7 @@
 use App\Services\Router;
 
 
-Router::page('/test','test');
+Router::page('/register','register');
 Router::page('/login','login');
 
 Router::enable();
