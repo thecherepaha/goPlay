@@ -16,7 +16,11 @@ class Router
     }
 
     public static function enable(){
-        print_r(self::$list);
+
+        $query = $_GET['q'];
+        echo $query;
+
+
     }
     
 }
