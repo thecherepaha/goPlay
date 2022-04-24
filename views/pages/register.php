@@ -15,7 +15,7 @@
     ?>
     <div class="container mt-4">
         <h2>Sign Up</h2>
-        <form action="/auth/register" method="post" enctype="multipart/form-data">
+        <form action="/auth/register" method="post">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" name="email" class="form-control" id="email">
@@ -27,10 +27,6 @@
             <div class="mb-3">
                 <label for="fullname" class="form-label">Fullname</label>
                 <input type="text" name="fullname" class="form-control" id="fullname">
-            </div>
-            <div class="mb-3">
-                <label for="avatar" class="form-label">Avatar</label>
-                <input type="file" name="avatar" class="form-control" id="avatar">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
