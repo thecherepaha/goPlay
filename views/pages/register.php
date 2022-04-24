@@ -6,7 +6,6 @@
 <html lang="en">
 
 <?php
-    $page_title = "Register";
     Page::part('head');
 ?>
 <body>
