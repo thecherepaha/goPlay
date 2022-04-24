@@ -24,9 +24,6 @@
                     <a href="#" class="nav-item nav-link">Messages</a>
                 </div>
                 <div class="navbar-nav ms-auto">
-                    <a href="#" class="nav-item nav-link">Register</a>
-                </div>
-                <div class="navbar-nav ms-auto">
                     <a href="#" class="nav-item nav-link">Login</a>
                 </div>
             </div>
