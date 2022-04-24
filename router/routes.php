@@ -2,7 +2,7 @@
 
 
 use App\Services\Router;
-use App\Controller\Auth;
+use App\Controllers\Auth;
 
 
 Router::page('/','home');
