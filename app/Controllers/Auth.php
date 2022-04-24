@@ -15,8 +15,9 @@ class Auth
         $avatar = $files["avatar"];
 
         $fileName = time() . '_' . $avatar["name"];
-
-        if(move_uploaded_file($avatar["tmp_name"],"uploads/avatars/" . $fileName)){
+        $path = "uploads/avatars/" . $fileName;
+        if(move_uploaded_file($avatar["tmp_name"],$path)){
+            //add
 
         }else{
             Router::error('500');
