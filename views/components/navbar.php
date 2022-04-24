@@ -8,12 +8,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="./" class="nav-item nav-link active">Home</a>
+                <a href="/" class="nav-item nav-link active">Home</a>
 
             </div>
             <div class="navbar-nav ms-auto">
-                <a href="./login" class="nav-item nav-link active">Login</a>
-                <a href="./register" class="nav-item nav-link active">Register</a>
+                <a href="/login" class="nav-item nav-link active">Login</a>
+                <a href="/register" class="nav-item nav-link active">Register</a>
             </div>
         </div>
     </div>
