@@ -18,27 +18,27 @@
         <form action="./auth/register" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" name="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username">
+                <input type="text" name="username" class="form-control" id="username">
             </div>
             <div class="mb-3">
                 <label for="fullname" class="form-label">Fullname</label>
-                <input type="text" class="form-control" id="fullname">
+                <input type="text" name="fullname" class="form-control" id="fullname">
             </div>
             <div class="mb-3">
-                <label for="Avatar" class="form-label">Avatar</label>
-                <input type="file" class="form-control" id="Avatar">
+                <label for="avatar" class="form-label">Avatar</label>
+                <input type="file" name="avatar" class="form-control" id="avatar">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" name="password" class="form-control" id="password">
             </div>
             <div class="mb-3">
                 <label for="pass_confirm" class="form-label">Password Confirmation</label>
-                <input type="password" class="form-control" id="pass_confirm">
+                <input type="password" name="pass_confirm" class="form-control" id="pass_confirm">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
