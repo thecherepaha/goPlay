@@ -12,7 +12,7 @@
     <?php
         Page::part('navbar');
     ?>
-    <h1>404: Page not found...</h1>
+    <h1>500: Error couldn't connect with server...</h1>
 
 </body>
 

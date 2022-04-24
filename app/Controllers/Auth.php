@@ -2,9 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Services\Router;
+
 class Auth
 {
-    public function register($data){
-        print_r($data);
+    public function register($data, $files){
+        $email = $data["email"];
+        $username = $data["username"];
+        $fullname = $data["fullname"];
+        $password = $data["password"];
+        $pass_confirm = $data["pass_confirm"];
+        $avatar = $files["avatar"];
+
+        $fileName = time() . '_' . $avatar["name"];
+
+        if(move_uploaded_file($avatar["tmp_name"],"uploads/avatars/" . $fileName)){
+
+        }else{
+            Router::error(500);
+        }
     }
 }
