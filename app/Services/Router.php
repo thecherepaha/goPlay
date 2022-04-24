@@ -33,10 +33,11 @@ class Router
         foreach(self::$list as $route){
             if($route["uri"] === '/'. $query){
                 if($route["post"] === true){
+                    echo $_SERVER["REQUEST_METHOD"];
+                    die();
                     $action = new $route["class"];
                     $method = $route["method"];
                     $action->$method();
-                    die();
                 } else {
                     require_once "views/pages/" . $route['page'] . ".php";
                     die();
