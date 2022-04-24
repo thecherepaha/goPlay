@@ -16,7 +16,7 @@ class Router
     }
 
     public static function enable(){
-        var_dump(self::$list);
+        print_r(self::$list);
     }
     
 }
