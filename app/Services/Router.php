@@ -33,7 +33,8 @@ class Router
         foreach(self::$list as $route){
             if($route["uri"] === '/'. $query){
                 if($route["post"] === true && $_SERVER["REQUEST_METHOD"] === "POST"){
-                    
+                    echo "Yo sup bro";
+                    die();
                     $action = new $route["class"];
                     $method = $route["method"];
                     $action->$method();
