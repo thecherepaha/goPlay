@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Auth
 {
-    public static function registr(){
+    public static function register(){
         echo "Register Action!";
     }
 }
