@@ -14,7 +14,7 @@
     <?php
         Page::part('navbar');
     ?>
-    <div class="container">
+    <div class="container h-50 mt-3">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
