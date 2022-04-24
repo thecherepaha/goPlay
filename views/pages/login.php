@@ -1,5 +1,4 @@
 <?php
-    $page_title = "Login";
     use App\Services\Page;
 ?>
 
@@ -7,6 +6,7 @@
 <html lang="en">
 
 <?php
+    $page_title = "Login";
     Page::part('head');
 ?>
 <body>
