@@ -18,7 +18,7 @@
         Page::part('navbar');
     ?>
     <div class="container mt-3">
-        <h4>Welcome, <?php $_SESSION["user"]["fullname"] ?>!</h4>
+        <h4>Welcome, <?= $_SESSION["user"]["fullname"] ?>!</h4>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -30,10 +30,10 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row"><?php $_SESSION["user"]["id"] ?></th>
-                    <td><?php $_SESSION["user"]["email"] ?></td>
-                    <td><?php $_SESSION["user"]["fullname"] ?></td>
-                    <td><img src="<?php $_SESSION["user"][""] ?>" height = "100 " alt=""></td>
+                    <th scope="row"><?= $_SESSION["user"]["id"] ?></th>
+                    <td><?= $_SESSION["user"]["email"] ?></td>
+                    <td><?= $_SESSION["user"]["fullname"] ?></td>
+                    <td><img src="<?= $_SESSION["user"][""] ?>" height = "100 " alt=""></td>
                 </tr>
             </tbody>
         </table>
