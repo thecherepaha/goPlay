@@ -8,6 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Raleway&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/scss/custom.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Medcare</title>
 </head>
