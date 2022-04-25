@@ -19,7 +19,7 @@
     ?>
     <div class="container mt-3">
         <h4>Welcome, <?= $_SESSION["user"]["fullname"] ?>!</h4>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive">
             <thead>
                 <tr>
                     <th scope="col">user_id</th>
