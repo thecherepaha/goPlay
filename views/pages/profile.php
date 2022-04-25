@@ -17,7 +17,7 @@
     <?php
         Page::part('navbar');
     ?>
-    <div class="container-fluid mt-3">
+    <div class="container mt-3">
         <h4>Welcome, <?= $_SESSION["user"]["fullname"] ?>!</h4>
         <table class="table table-bordered table-responsive">
             <thead>
