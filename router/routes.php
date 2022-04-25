@@ -15,5 +15,6 @@ Router::page('/admin', 'admin');
 Router::post('/auth/register', Auth::class, 'register', true, true);
 Router::post('/auth/login', Auth::class, 'login', true);
 Router::post('/auth/logout', Auth::class, 'logout');
+Router::post('/auth/article', Auth::class, 'article', true);
 
 Router::enable();

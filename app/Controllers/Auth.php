@@ -6,6 +6,17 @@ use App\Services\Router;
 
 class Auth
 {
+    public function article($data){
+
+        $article_header = $data["article_header"];
+        $article_content = $data["article_content"];
+        if($article_header === "" || $article_content === ""){
+            die('fill all inputs');
+        }
+
+
+
+    }
 
     public function login($data){
         $email = $data["email"];
