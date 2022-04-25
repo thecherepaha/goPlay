@@ -11,9 +11,21 @@
                 <a href="/" class="nav-item nav-link active">Home</a>
 
             </div>
+
             <div class="navbar-nav ms-auto">
+                <?php
+                    if(!$_SESSION["user"]){
+                ?>
                 <a href="/login" class="nav-item nav-link active">Login</a>
                 <a href="/register" class="nav-item nav-link active">Register</a>
+                <?php
+                    }else{
+                ?>
+                <a href="/profile" class="nav-item nav-link active">Profile</a>
+                <a href="/logout" class="nav-item nav-link active">Logout</a>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>

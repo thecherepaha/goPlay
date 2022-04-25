@@ -1,6 +1,6 @@
 <?php
     use App\Services\Page;
-    session_start();
+
     if(!$_SESSION["user"]){
         \App\Services\Router::redirect('/login');
     } 
