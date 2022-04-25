@@ -2,11 +2,8 @@
     use App\Services\Page;
 
     $user = $_SESSION["user"]["fullname"];
-    var_dump($user);
-
 
     $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
-    var_dump($articles);
 ?>
 
 <!doctype html>
