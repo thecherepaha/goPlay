@@ -28,13 +28,13 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseThree">
-                        <?= $article->article_header ?>
+                        <?= $article["article_header"] ?>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
-                        <strong><?= $article->article_content ?></strong> 
+                        <strong><?= $article["article_content"]  ?></strong> 
                     </div>
                 </div>
             </div>
