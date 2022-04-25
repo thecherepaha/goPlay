@@ -27,6 +27,7 @@ class Auth
             $user->email = $email;
             $user->username = $username;
             $user->fullname = $fullname;
+            $user->avatar = "/" . $path;
             $user->password = password_hash($password, PASSWORD_DEFAULT);
             \R::store($user);
             Router::redirect('login');
