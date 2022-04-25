@@ -3,10 +3,10 @@
 
     $user = $_SESSION["user"]["fullname"];
     var_dump($user);
-    
+
 
     $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
-    
+    var_dump($articles);
 ?>
 
 <!doctype html>
@@ -24,7 +24,7 @@
         <div class="accordion" id="accordionPanelsStayOpenExample">
             
             <?php
-                foreach($article as $article){
+                foreach($articles as $article){
                     ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
