@@ -18,13 +18,14 @@
         Page::part('navbar');
     ?>
     <div class="container mt-3">
-        <h4>This is profile page!</h4>
+        <h4>Welcome, <?php $_SESSION["user"]["fullname"] ?>!</h4>
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th scope="col">user_id</th>
                     <th scope="col">email</th>
                     <th scope="col">fullname</th>
+                    <th scope="col">avatar</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,10 +33,10 @@
                     <th scope="row"><?php $_SESSION["user"]["id"] ?></th>
                     <td><?php $_SESSION["user"]["email"] ?></td>
                     <td><?php $_SESSION["user"]["fullname"] ?></td>
+                    <td><img src="<?php $_SESSION["user"][""] ?>" height = "100 " alt=""></td>
                 </tr>
             </tbody>
         </table>
-        <img src="<?php $_SESSION["user"][""] ?>" height = "100 " alt="">
     </div>
 
 
