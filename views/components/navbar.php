@@ -16,8 +16,8 @@
                 <?php
                     if(!$_SESSION["user"]){
                 ?>
-                <a href="/login" class="nav-item nav-link active"><i class="bi bi-box-arrow-in-right"></i> Login</a>
-                <a href="/register" class="nav-item nav-link active"><span class="glyphicon glyphicon-user"></span> Register</a>
+                <a href="/login" class="nav-item nav-link active">Login</a>
+                <a href="/register" class="nav-item nav-link active">Register</a>
                 <?php
                     }else{
                 ?>
