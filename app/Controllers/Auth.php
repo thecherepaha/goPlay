@@ -6,6 +6,20 @@ use App\Services\Router;
 
 class Auth
 {
+
+    public function auth($data){
+        $email = $data["email"];
+        $password = $data["password"];
+        
+        $user = \R::findOne('users', 'email = ?', [$email]);
+        if(!$user){
+            die('User not found!');
+        }
+        if(password_verify($password, $user->password)){
+            $_SESSION["user_id"] = $user->id;
+            $_SESSION["group"] = $user->group;
+        }
+    }
     public function register($data, $files){
         $email = $data["email"];
         $username = $data["username"];
@@ -29,6 +43,7 @@ class Auth
             $user->fullname = $fullname;
             $user->avatar = "/" . $path;
             $user->password = password_hash($password, PASSWORD_DEFAULT);
+            $user->group = 1;
             \R::store($user);
             Router::redirect('/login');
         }else{
