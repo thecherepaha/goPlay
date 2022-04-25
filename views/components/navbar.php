@@ -19,7 +19,7 @@
                 <a href="/login" class="nav-item nav-link active">Login</a>
                 <a href="/register" class="nav-item nav-link active">Register</a>
                 <?php
-                    }elseif($_SESSION["user"]["group"] *1!==2){
+                    }elseif($_SESSION["user"]["group"] *1!==1){
                 ?>
                 <a href="/admin" class="nav-item nav-link active">Admin</a>
                 <a href="/profile" class="nav-item nav-link active">Profile</a>
