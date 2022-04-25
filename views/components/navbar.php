@@ -23,8 +23,9 @@
                 ?>
                 <a href="/profile" class="nav-item nav-link active">Profile</a>
                 <form action="/auth/logout" method="post">
-                    <button type="submit" class="nav-item nav-link active">Logout</button>
+                    <button type="submit"><a class="nav-item nav-link active">Logout</a></button>
                 </form>
+                
                 <?php
                     }
                 ?>
