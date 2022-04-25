@@ -30,7 +30,7 @@ class Auth
             $user->avatar = "/" . $path;
             $user->password = password_hash($password, PASSWORD_DEFAULT);
             \R::store($user);
-            Router::redirect('login');
+            Router::redirect('/login');
         }else{
             Router::error(500);
         }
