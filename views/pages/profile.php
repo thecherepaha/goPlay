@@ -33,7 +33,7 @@
                     <th scope="row"><?= $_SESSION["user"]["id"] ?></th>
                     <td><?= $_SESSION["user"]["email"] ?></td>
                     <td><?= $_SESSION["user"]["fullname"] ?></td>
-                    <td><img src="<?= $_SESSION["user"]["avatar"] ?>" height = "60" class="rounded-circle" alt=""></td>
+                    <td><img src="<?= $_SESSION["user"]["avatar"] ?>" height = "80" class="rounded-circle" alt=""></td>
                 </tr>
             </tbody>
         </table>
