@@ -11,5 +11,5 @@ Router::page('/login','login');
 Router::page('/profile', 'profile');
 
 Router::post('/auth/register', Auth::class, 'register', true, true);
-
+Router::post('/auth/login', Auth::class, 'login', true);
 Router::enable();

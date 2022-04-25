@@ -7,7 +7,7 @@ use App\Services\Router;
 class Auth
 {
 
-    public function auth($data){
+    public function login($data){
         $email = $data["email"];
         $password = $data["password"];
         
