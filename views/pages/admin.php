@@ -27,7 +27,7 @@
             </div>
             <div class="mb-3">
                 <label for="article_content" class="form-label">Article Content</label>
-                <textarea type="text" name="article_content" class="form-control" id="article_content">
+                <textarea type="text" name="article_content" class="form-control" id="article_content"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
