@@ -20,6 +20,8 @@ class Auth
         $article->article_author = $_SESSION["user"]["fullname"];
         \R::store($article);
 
+        Router::redirect('/');
+
 
 
     }
