@@ -19,11 +19,11 @@ class Auth
             session_start();
             $_SESSION["user"] = [
                 "id" => $user->id,
-                "username" => $user ->username,
-                "fullname" => $user ->fullname,
-                "group" => $user ->group,
-                "email" => $user ->email,
-                "avatar" => $user ->avatar,
+                "username" => $user->username,
+                "fullname" => $user->fullname,
+                "group" => $user->group,
+                "email" => $user->email,
+                "avatar" => $user->avatar,
             ]; 
             Router::redirect('/profile');
         }else{
