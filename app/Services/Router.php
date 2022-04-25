@@ -62,5 +62,10 @@ class Router
     public static function error($error){
         require_once "views/errors/" . $error . ".php";
     }
+
+    public static function redirect($page){
+        require_once "views/pages/" . $page . ".php";
+        die();
+    }
     
 }
