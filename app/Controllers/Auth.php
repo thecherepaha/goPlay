@@ -17,10 +17,21 @@ class Auth
         }
         if(password_verify($password, $user->password)){
             session_start();
-            $_SESSION["user_id"] = $user->id;
-            $_SESSION["group"] = $user->group;
+            $_SESSION["user"] = [
+                "id" => $user->id,
+                "username" => $user ->username,
+                "fullname" => $user ->fullname,
+                "group" => $user ->group,
+                "email" => $user ->email,
+                "avatar" => $user ->avatar,
+            ]; 
+            Router::redirect('/profile');
+        }else{
+            die('Incorrect login or password');
         }
     }
+
+    
     public function register($data, $files){
         $email = $data["email"];
         $username = $data["username"];
