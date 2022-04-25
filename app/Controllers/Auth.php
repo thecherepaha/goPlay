@@ -25,8 +25,7 @@ class Auth
                 "email" => $user->email,
                 "avatar" => $user->avatar,
             ]; 
-            print_r($_SESSION["user"]);
-            die;
+            
             Router::redirect('/profile');
         }else{
             die('Incorrect login or password');
