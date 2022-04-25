@@ -22,7 +22,9 @@
                     }else{
                 ?>
                 <a href="/profile" class="nav-item nav-link active">Profile</a>
-                <a href="/logout" class="nav-item nav-link active">Logout</a>
+                <form action="/auth/logout" method="post">
+                    <button type="submit" class="btn btn-danger nav-item nav-link active">Logout</button>
+                </form>
                 <?php
                     }
                 ?>
