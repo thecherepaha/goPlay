@@ -17,7 +17,6 @@ class Auth
         $article  = \R::dispense('articles');
         $article->article_header = $article_header;
         $article->article_content = $article_content;
-        $article->article_author_id = $_SESSION["user"]["id"];
         $article->article_author = $_SESSION["user"]["fullname"];
         \R::store($article);
 
