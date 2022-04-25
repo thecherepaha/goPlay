@@ -2,7 +2,8 @@
     use App\Services\Page;
 
     $user = $_SESSION["user"]["fullname"];
-    $articles = R::find( 'articles', ' article_author LIKE ? ', [$user]);
+
+    $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
     
 ?>
 
