@@ -16,14 +16,14 @@
                 <?php
                     if(!$_SESSION["user"]){
                 ?>
-                <a href="/login" class="nav-item nav-link active">Login</a>
+                <a href="/login" class="nav-item nav-link active"><i class="bi bi-box-arrow-in-right"></i> Login</a>
                 <a href="/register" class="nav-item nav-link active"><span class="glyphicon glyphicon-user"></span> Register</a>
                 <?php
                     }else{
                 ?>
                 <a href="/profile" class="nav-item nav-link active"><i class="bi bi-person-circle"></i> Profile</a>
                 <form action="/auth/logout" method="post">
-                    <button type="submit" class="btn btn-danger">Logout</button>
+                    <button type="submit" class="btn btn-danger"><i class="bi bi-backspace"></i> Logout</button>
                 </form>
                 <?php
                     }
