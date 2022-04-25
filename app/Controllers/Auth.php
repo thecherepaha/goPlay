@@ -14,6 +14,12 @@ class Auth
             die('fill all inputs');
         }
 
+        $article  = \R::dispense('articles');
+        $article->article_header = $article_header;
+        $article->article_content = $article_content;
+        $article->article_author = $_SESSION["user"]["fullname"];
+        \R::store($article);
+
 
 
     }
