@@ -21,7 +21,7 @@
                 <?php
                     }else{
                 ?>
-                <a href="/profile" class="nav-item nav-link active"><span><i class="fa fa-user" aria-hidden="true">Profile</i></span>Profile</a>
+                <a href="/profile" class="nav-item nav-link active"><span><i class="fa fa-user" aria-hidden="true"></i></span>Profile</a>
                 <form action="/auth/logout" method="post">
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
