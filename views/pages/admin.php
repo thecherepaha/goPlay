@@ -17,7 +17,22 @@
     <?php
         Page::part('navbar');
     ?>
-    <h2>This is admin page!</h2>
+
+    <div class="container mt-3">
+        <h4>Add Post Form</h4>
+        <form action="/auth/article" method="post">
+            <div class="mb-3">
+                <label for="article_header" class="form-label">Article Name</label>
+                <input type="text" name="article_header" class="form-control" id="article_header">
+            </div>
+            <div class="mb-3">
+                <label for="article_content" class="form-label">Article Content</label>
+                <input type="text" name="article_content" class="form-control" id="article_content">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
 
 </body>
 
