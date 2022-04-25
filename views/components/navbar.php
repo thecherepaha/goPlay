@@ -19,6 +19,14 @@
                 <a href="/login" class="nav-item nav-link active">Login</a>
                 <a href="/register" class="nav-item nav-link active">Register</a>
                 <?php
+                    }elseif($_SESSION["user"]["group"] *1!==2){
+                ?>
+                <a href="/admin" class="nav-item nav-link active">Admin</a>
+                <a href="/profile" class="nav-item nav-link active">Profile</a>
+                <form action="/auth/logout" method="post">
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+                <?php
                     }else{
                 ?>
                 <a href="/profile" class="nav-item nav-link active">Profile</a>
@@ -28,6 +36,7 @@
                 <?php
                     }
                 ?>
+
             </div>
         </div>
     </div>
