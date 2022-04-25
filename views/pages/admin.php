@@ -1,5 +1,9 @@
 <?php
     use App\Services\Page;
+
+    if($_SESSION["user"] && $_SESSION["user"]["group"] !=2){
+        \App\Services\Router::redirect('/profile');
+    }
 ?>
 
 <!doctype html>

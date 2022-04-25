@@ -9,6 +9,8 @@ Router::page('/','home');
 Router::page('/register','register');
 Router::page('/login','login');
 Router::page('/profile', 'profile');
+Router::page('/admin', 'admin');
+
 
 Router::post('/auth/register', Auth::class, 'register', true, true);
 Router::post('/auth/login', Auth::class, 'login', true);
