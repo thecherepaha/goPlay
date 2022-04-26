@@ -40,7 +40,7 @@ class Auth
         $user->favorites = $id;
         \R::store($user);
         // $article = \R::findOne('articles', 'id = ?', [$id]);
-
+        $_SESSION["user"]["favorites"] = $id;
         Router::redirect('/favorites');        
        
     }
