@@ -37,7 +37,7 @@ class Auth
         // $article = \R::findOne( 'articles', ' id = ? ', [$id]);
 
         
-        $user  = \R::load('users', ' id LIKE ? ',[$user_id]);
+        $user  = \R::load('users',[$user_id]);
         $user->favorites = $id;
 
         \R::store($user);
