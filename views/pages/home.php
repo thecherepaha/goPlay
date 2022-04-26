@@ -2,7 +2,8 @@
     
     use App\Services\Page;
 
-    if($_SESSION["user"]){
+    if($_SESSION["user"] && $_SESSION["user"]["group"] *1!==1){
+        $articles = \R::find( 'articles');
         $user = $_SESSION["user"]["fullname"];
         $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
     }else{
