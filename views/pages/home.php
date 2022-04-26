@@ -42,7 +42,7 @@
                                 <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id" />
                             </div>
                             <button type="submit" class="btn btn-primary">
-                                likes <span class="badge bg-secondary"><?php $likes = \R::find('users',' favorites = ?', [$article->id]); echo count($likes); ?></span>
+                                likes <span class="badge bg-secondary"><?php Page::likes($article->id); ?></span>
                             </button>
                         </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
