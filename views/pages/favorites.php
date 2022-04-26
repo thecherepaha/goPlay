@@ -4,6 +4,7 @@
 
     if($_SESSION["user"]){
         $favorites = $_SESSION["user"]["favorites"];
+        print_r($favorites);
         $article = \R::findOne('articles', $favorites);
         print_r($article);
     }else{

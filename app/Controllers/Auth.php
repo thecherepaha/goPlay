@@ -39,10 +39,6 @@ class Auth
         $user->favorites = $id;
         \R::store($user);
 
-        $_SESSION["user"] = [
-            "favorites" => $id,
-        ];
-
         Router::redirect('/favorites');        
        
     }
