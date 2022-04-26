@@ -39,13 +39,8 @@ class Auth
         $user->favorites = $id;
 
         \R::store($user);
-        // print_r($user);
-        // $user->favorites = $id;
 
-        // \R::store($user);
-
-
-        
+        Router::redirect('/favorites');        
        
     }
 
