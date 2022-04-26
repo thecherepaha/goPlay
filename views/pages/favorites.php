@@ -3,7 +3,7 @@
     use App\Services\Page;
 
     if($_SESSION["user"]){
-        $favorites = $_SESSION["user"]["favorites"];
+        $favorites = $_SESSION["user"]["favorites"]*1;
         print_r($favorites);
         $article = \R::findOne('articles', $favorites);
         print_r($article);
