@@ -11,7 +11,7 @@
 
 <?php
     $page_title = 'Home';
-    Page::part('head');
+    include_once 'views/components/head.php';
 ?>
 
 <body>
