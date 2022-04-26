@@ -31,17 +31,18 @@ class Auth
 
         if(!$_SESSION("user")){
             Router::redirect('/login');
-            die();
         }
+        $user_id = $_SESSION["user"]["id"];
+        print_r($user_id);
 
         // $article = \R::findOne( 'articles', ' id = ? ', [$id]);
 
         
-        $user  = \R::load('users', ' id LIKE ? ',[$_SESSION["user"]["id"]]);
-        $user->favorites = $id;
+        // $user  = \R::load('users', ' id LIKE ? ',[$_SESSION["user"]["id"]]);
+        // $user->favorites = $id;
 
-        \R::store($user);
-        print_r($user);
+        // \R::store($user);
+        // print_r($user);
         // $user->favorites = $id;
 
         // \R::store($user);
