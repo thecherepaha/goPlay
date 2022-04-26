@@ -41,7 +41,7 @@
                 <div id="panelsStayOpen-collapse<?= $article->id ?>" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
                     <div class="accordion-body">
-                        <?= $article->article_content  ?> 
+                        <em><<?= $article->article_content  ?></em> 
                     </div>
                 </div>
             </div>
