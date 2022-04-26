@@ -3,9 +3,8 @@
     use App\Services\Page;
 
     if($_SESSION["user"]){
-        $articles = \R::find( 'articles');
-        $user = $_SESSION["user"]["favorites"];
-        $articles = \R::find( 'articles', ' id LIKE ? ', [$user]);
+        $favorites = $_SESSION["user"]["favorites"];
+        $article = \R::findOne('articles', 'id = ?', [$favorites]);
     }else{
         \App\Services\Router::redirect('/login');
     }
@@ -26,9 +25,6 @@
     ?>
     <div class="container mt-3">
         <div class="accordion" id="accordionPanelsStayOpenExample">
-            <?php
-                foreach($articles as $article){
-                    ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -36,12 +32,6 @@
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
                         style="display:inline-block !important;">
                         <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
-                        <form action="/auth/addhub" method="post">
-                            <div hidden>
-                                <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id"/>
-                            </div>
-                            <button type="submit" class="btn btn-primary">+</button>
-                        </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
                 </h2>
@@ -52,9 +42,6 @@
                     </div>
                 </div>
             </div>
-            <?php
-                }
-            ?>
         </div>
 
     </div>
