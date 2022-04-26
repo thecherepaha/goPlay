@@ -7,5 +7,5 @@
 
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <script src="../assets/js/bootstrap.min.js"></script>
-    <title><?php $page_title = 'Home'; if(isset($page_title)) echo $page_title ?> | Medcare</title>
+    <title><?php echo $page_title ?> | Medcare</title>
 </head>
