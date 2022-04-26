@@ -38,10 +38,12 @@
                         <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
                         <form action="/auth/addhub" method="post">
                             <div hidden>
-                                <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id"/>
-                                <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id"/>
+                                <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id" />
+                                <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id" />
                             </div>
-                            <button type="submit" class="btn btn-primary">+</button>
+                            <button type="submit" class="btn btn-primary">
+                                likes <span class="badge bg-secondary"><?php $likes = \R::find('users',' favorites = ?', [$article->article_header]); echo count($likes); ?></span>
+                            </button>
                         </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
