@@ -5,7 +5,6 @@
     if($_SESSION["user"]){
         $favorites = $_SESSION["user"]["favorites"];
         $article = \R::findOne('articles', $favorites);
-        print_r($article);
     }else{
         \App\Services\Router::redirect('/login');
     }
