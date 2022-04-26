@@ -27,7 +27,10 @@ class Auth
     }
 
     public function addhub($data){
-        print_r($data);
+        $id = $data["article_id"];
+
+        print_r($id);
+       
     }
 
     public function login($data){
