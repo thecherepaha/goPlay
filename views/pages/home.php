@@ -2,9 +2,14 @@
     
     use App\Services\Page;
 
-    $user = $_SESSION["user"]["fullname"];
+    if($_SESSION["user"]){
+        $user = $_SESSION["user"]["fullname"];
+        $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
+    }else{
+        $articles = \R::find( 'articles');
+    }
 
-    $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
+    
 ?>
 
 <!doctype html>
