@@ -32,6 +32,7 @@ class Auth
         if(!$_SESSION("user")){
             Router::redirect('/login');
         }
+        session_start();
         $user_id = $_SESSION["user"]["id"];
         print_r($user_id);
 
