@@ -40,6 +40,8 @@ class Auth
         $user  = \R::load('users', 'id = ?',[$_SESSION["user"]["id"]]);
         $user->favorites = $id;
 
+        \R::store($user);
+
 
         
        
