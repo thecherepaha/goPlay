@@ -34,8 +34,9 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>">
-                        <strong><?= $article->article_header ?></strong> <a href="#" class="float-right"><code><?= $article->article_author ?></code></a>
+                        <strong><?= $article->article_header ?></strong>
                     </button>
+                    <a href="#" class="float-right"><code><?= $article->article_author ?></code></a>
                 </h2>
                 <div id="panelsStayOpen-collapse<?= $article->id ?>" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
