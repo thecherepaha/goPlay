@@ -37,7 +37,7 @@
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
                         style="display:inline-block !important;">
                         <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
-                        <form action="auth/addhub" method="post">
+                        <form action="/auth/addhub" method="post">
                             <div hidden>
                                 <input type="text" value = "'. <?= $article->article_id ?> .'" id="article_id" name="article_id">
                             </div>
