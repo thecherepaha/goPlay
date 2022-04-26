@@ -11,7 +11,7 @@
 <html lang="en">
 
 <?php
-    Page::part('head');
+    require_once 'views/components/head.php';
 ?>
 
 <body>
