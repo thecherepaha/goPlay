@@ -26,6 +26,10 @@ class Auth
 
     }
 
+    public function addhub($data){
+        
+    }
+
     public function login($data){
         $email = $data["email"];
         $password = $data["password"];

@@ -32,18 +32,20 @@
                     ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapse<?= $article->id ?>" style="display:inline-block !important;">
-                        <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
-                        <form action="auth/user" method="post"><button type="submit" class="btn btn-primary">+</button></form>
-                        <div style="float:right;">Author: <code><?= $article->article_author ?></code></div> 
-                    </button>
+                    <form action="auth/addhub" method="post">
+                        <button class="accordion-button collapsed" type="submit" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
+                            style="display:inline-block !important;">
+                            <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
+                            <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
+                        </button>
+                    </form>
                 </h2>
                 <div id="panelsStayOpen-collapse<?= $article->id ?>" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
                     <div class="accordion-body">
-                        <em><?= $article->article_content  ?></em> 
+                        <em><?= $article->article_content ?></em>
                     </div>
                 </div>
             </div>
