@@ -42,16 +42,14 @@
                                 <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id" />
                             </div>
                             <?php 
-                                $class = "btn-outline-primary"; 
+                       
                                 if($_SESSION["user"]["favorites"] == $article->id){
-                                $class = "btn-primary";
+                                $class = "btn-primary";}else{$class = "btn-outline-primary"; }
                             ?>
                             <button type="submit" class="btn <?= $class ?>">
                                 likes <span class="badge bg-secondary"><?php Page::likes($article->id); ?></span>
                             </button>
-                            <?php 
-                                }
-                            ?>
+            
                         </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
