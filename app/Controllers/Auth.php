@@ -27,7 +27,7 @@ class Auth
     }
 
     public function addhub($data){
-        
+        print_r($data);
     }
 
     public function login($data){
