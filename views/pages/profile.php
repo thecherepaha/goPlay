@@ -1,5 +1,4 @@
 <?php
-    $page_title = "Profile";
     use App\Services\Page;
 
     if(!$_SESSION["user"]){
@@ -12,6 +11,7 @@
 
 <?php
     Page::part('head');
+    $page_title = "Profile";
 ?>
 
 <body>
