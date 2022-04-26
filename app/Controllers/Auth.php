@@ -32,11 +32,9 @@ class Auth
 
         if(!$_SESSION["user"]){
             Router::redirect('/login');
+            die();
         }
 
-        // $article = \R::findOne( 'articles', ' id = ? ', [$id]);
-
-        // print_r($user_id);
         $user  = \R::load('users',$user_id);
         $user->favorites = $id;
 
