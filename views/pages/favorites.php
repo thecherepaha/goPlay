@@ -2,14 +2,13 @@
     
     use App\Services\Page;
 
-    if($_SESSION["user"]){
-        $favorites = $_SESSION["user"]["favorites"];
-        print_r($favorites);
-        $article = \R::findOne('articles',' id = ?' [$favorites]);
-        print_r($article);
+    if($_SESSION["user"] && $_SESSION["user"]["group"] *1!==1){
+        $user = $_SESSION["user"]["fullname"];
+        $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
     }else{
-        \App\Services\Router::redirect('/login');
+        $articles = \R::find( 'articles');
     }
+
     
 ?>
 
@@ -27,6 +26,9 @@
     ?>
     <div class="container mt-3">
         <div class="accordion" id="accordionPanelsStayOpenExample">
+            <?php
+                foreach($articles as $article){
+                    ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -34,6 +36,13 @@
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
                         style="display:inline-block !important;">
                         <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
+                        <form action="/auth/addhub" method="post">
+                            <div hidden>
+                                <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id"/>
+                                <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id"/>
+                            </div>
+                            <button type="submit" class="btn btn-primary">+</button>
+                        </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
                 </h2>
@@ -44,10 +53,12 @@
                     </div>
                 </div>
             </div>
+            <?php
+                }
+            ?>
         </div>
 
     </div>
-    <?php unset($article); unset($favorites); ?>
 
 
 </body>
