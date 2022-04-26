@@ -10,7 +10,8 @@
 <html lang="en">
 
 <?php
-    Page::part('head');
+    $page_title = "Login";
+    require_once 'views/components/head.php';
 ?>
 <body>
     <?php

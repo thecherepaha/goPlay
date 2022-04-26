@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'Home';
+    
     use App\Services\Page;
 
     $user = $_SESSION["user"]["fullname"];
@@ -11,6 +11,7 @@
 <html lang="en">
 
 <?php
+    $page_title = 'Home';
     require_once 'views/components/head.php';
 ?>
 

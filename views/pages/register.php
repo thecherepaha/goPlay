@@ -11,7 +11,7 @@
 
 <?php
     $page_title = "Register";
-    Page::part('head');
+    require_once 'views/components/head.php';
 ?>
 <body>
     <?php
