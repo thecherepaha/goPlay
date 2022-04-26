@@ -10,7 +10,6 @@
 <html lang="en">
 
 <?php
-    $page_title = "Home";
     Page::part('head');
 ?>
 
@@ -18,6 +17,9 @@
     <?php
         Page::part('navbar');
     ?>
+    <?php
+        Page::title();
+        ?>
     <div class="container mt-3">
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <?php

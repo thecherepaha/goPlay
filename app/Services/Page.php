@@ -8,7 +8,7 @@ class Page
         require_once "views/components/" . $part_name . ".php";
     }
 
-    public static function title($title){
-        echo $title;
+    public static function title($uri){
+        print_r($uri);
     }
 }

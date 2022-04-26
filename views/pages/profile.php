@@ -11,7 +11,6 @@
 
 <?php
     Page::part('head');
-    $page_title = "Profile";
 ?>
 
 <body>
