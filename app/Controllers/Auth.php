@@ -36,11 +36,11 @@ class Auth
 
         // $article = \R::findOne( 'articles', ' id = ? ', [$id]);
 
-        
-        $user  = \R::load('users',[$user_id]);
-        $user->favorites = $id;
+        print_r($user_id);
+        // $user  = \R::load('users',[$user_id]);
+        // $user->favorites = $id;
 
-        \R::store($user);
+        // \R::store($user);
         // print_r($user);
         // $user->favorites = $id;
 
