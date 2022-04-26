@@ -27,6 +27,7 @@ class Auth
     }
 
     public function addhub($data){
+        
         $id = $data["article_id"];
         $user_id = $data["user_id"];
 
@@ -38,6 +39,12 @@ class Auth
         $user  = \R::load('users',$user_id);
         $user->favorites = $id;
         \R::store($user);
+        $article = \R::findOne('articles', 'id = ?', [$id]);
+        session_start();
+        $_SESSION["user"] = [
+            "favorites" => $article->id,
+        ];
+
         Router::redirect('/');        
        
     }
