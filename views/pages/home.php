@@ -1,4 +1,5 @@
 <?php
+    $page_title = "Home";
     use App\Services\Page;
 
     $user = $_SESSION["user"]["fullname"];
