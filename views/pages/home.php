@@ -39,7 +39,7 @@
                         <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
                         <form action="/auth/addhub" method="post">
                             <div>
-                                <input type="text" value="<?= $article->article_id ?>" id="article_id" name="article_id">
+                                <input type="text" value="<?php echo $article->article_id; ?>" id="article_id" name="article_id">
                             </div>
                             <button type="submit" class="btn btn-primary">+</button>
                         </form>
