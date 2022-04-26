@@ -47,6 +47,7 @@
         </div>
 
     </div>
+    <?php unset($article); unset($favorites); ?>
 
 
 </body>
