@@ -1,6 +1,14 @@
 <?php
     
     use App\Services\Page;
+
+    if($_SESSION["user"]){
+        $articles = \R::find( 'articles');
+        $user = $_SESSION["user"]["favorites"];
+        $articles = \R::find( 'articles', ' id LIKE ? ', [$user]);
+    }else{
+        \App\Services\Router::redirect('/login');
+    }
     
 ?>
 
