@@ -1,4 +1,5 @@
 <?php
+    $page_title = 'Home';
     use App\Services\Page;
 
     $user = $_SESSION["user"]["fullname"];
@@ -10,7 +11,6 @@
 <html lang="en">
 
 <?php
-    $page_title = 'Home';
     Page::part('head');
 ?>
 
