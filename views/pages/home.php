@@ -19,20 +19,19 @@
     ?>
     <div class="container mt-3">
         <div class="accordion" id="accordionPanelsStayOpenExample">
-            
             <?php
                 foreach($articles as $article){
                     ?>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree">
+                        data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapse<?= $article->id ?>">
                         <?= $article->article_header ?>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingThree">
+                <div id="panelsStayOpen-collapse<?= $article->id ?>" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
                     <div class="accordion-body">
                         <strong><?= $article->article_content  ?></strong> 
                     </div>
