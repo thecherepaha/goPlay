@@ -3,9 +3,9 @@
     use App\Services\Page;
 
     if($_SESSION["user"]){
-        $favorites = $_SESSION["user"]["favorites"]*1;
+        $favorites = $_SESSION["user"]["favorites"];
         print_r($favorites);
-        $article = \R::findOne('articles', $favorites);
+        $article = \R::findOne('articles', [$favorites]);
         print_r($article);
     }else{
         \App\Services\Router::redirect('/login');
