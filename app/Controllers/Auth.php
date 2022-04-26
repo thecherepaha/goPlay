@@ -38,6 +38,9 @@ class Auth
 
         
         $user  = \R::load('users', ' id LIKE ? ',[$_SESSION["user"]["id"]]);
+        $user->favorites = $id;
+
+        \R::store($user);
         print_r($user);
         // $user->favorites = $id;
 
