@@ -35,7 +35,7 @@
                         data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
                         style="display:inline-block !important;">
-                        <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
+                        <div style="float:left;"><strong><?= $article->article_header ?></strong></div>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
                 </h2>
