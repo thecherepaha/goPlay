@@ -1,4 +1,5 @@
 <?php
+    $page_title = "Profile";
     use App\Services\Page;
 
     if(!$_SESSION["user"]){
