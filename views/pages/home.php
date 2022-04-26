@@ -40,6 +40,7 @@
                         <form action="/auth/addhub" method="post">
                             <div hidden>
                                 <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id"/>
+                                <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id"/>
                             </div>
                             <button type="submit" class="btn btn-primary">+</button>
                         </form>

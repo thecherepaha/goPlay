@@ -28,21 +28,19 @@ class Auth
 
     public function addhub($data){
         $id = $data["article_id"];
+        $user_id = $data["user_id"];
 
-        if(!$_SESSION("user")){
+        if(!$_SESSION["user"]){
             Router::redirect('/login');
         }
-        session_start();
-        $user_id = $_SESSION["user"]["id"];
-        print_r($user_id);
 
         // $article = \R::findOne( 'articles', ' id = ? ', [$id]);
 
         
-        // $user  = \R::load('users', ' id LIKE ? ',[$_SESSION["user"]["id"]]);
-        // $user->favorites = $id;
+        $user  = \R::load('users', ' id LIKE ? ',[$user_id]);
+        $user->favorites = $id;
 
-        // \R::store($user);
+        \R::store($user);
         // print_r($user);
         // $user->favorites = $id;
 
