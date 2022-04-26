@@ -30,6 +30,7 @@
                     }else{
                 ?>
                 <a href="/profile" class="nav-item nav-link active">Profile</a>
+                <a href="/favorites" class="nav-item nav-link active">Favorites</a>
                 <form action="/auth/logout" method="post">
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>

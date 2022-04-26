@@ -10,6 +10,7 @@ Router::page('/register','register');
 Router::page('/login','login');
 Router::page('/profile', 'profile');
 Router::page('/admin', 'admin');
+Router::page('/favorites', 'favorites');
 
 
 Router::post('/auth/register', Auth::class, 'register', true, true);

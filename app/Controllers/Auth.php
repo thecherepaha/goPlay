@@ -29,7 +29,19 @@ class Auth
     public function addhub($data){
         $id = $data["article_id"];
 
-        print_r($id);
+        if(!$_SESSION("user")){
+            Router::redirect('/login');
+            die();
+        }
+
+        // $article = \R::findOne( 'articles', ' id = ? ', [$id]);
+
+        
+        $user  = \R::load('users', 'id = ?',[$_SESSION["user"]["id"]]);
+        $user->favorites = $id;
+
+
+        
        
     }
 
@@ -83,6 +95,7 @@ class Auth
             $user->avatar = "/" . $path;
             $user->password = password_hash($password, PASSWORD_DEFAULT);
             $user->group = 1;
+            $user->favorites = "";
             \R::store($user);
             Router::redirect('/login');
         }else{
