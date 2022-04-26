@@ -35,7 +35,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>" style="display:inline-block !important;">
-                        <div style="float:left;"><?= $article->article_header ?></div>
+                        <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
                         <form action="auth/user" method="post"><button type="submit" class="btn btn-primary">+</button></form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div> 
                     </button>
