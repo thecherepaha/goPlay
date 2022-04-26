@@ -2,11 +2,11 @@
     
     use App\Services\Page;
 
-    if($_SESSION["user"] && $_SESSION["user"]["group"] *1!==1){
-        $user = $_SESSION["user"]["fullname"];
-        $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
+    if($_SESSION["user"]){
+        $user_id = $_SESSION["user"]["favorites"];
+        $articles = \R::find( 'articles', ' id = ? ', [$user_id]);
     }else{
-        $articles = \R::find( 'articles');
+        \App\Services\Router::redirect('/login');
     }
 
     
@@ -36,13 +36,6 @@
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
                         style="display:inline-block !important;">
                         <div style="text-align:center;"><strong><?= $article->article_header ?></strong></div>
-                        <form action="/auth/addhub" method="post">
-                            <div hidden>
-                                <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id"/>
-                                <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id"/>
-                            </div>
-                            <button type="submit" class="btn btn-primary">+</button>
-                        </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
                 </h2>

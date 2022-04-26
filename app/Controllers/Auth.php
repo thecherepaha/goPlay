@@ -38,8 +38,7 @@ class Auth
         $user  = \R::load('users',$user_id);
         $user->favorites = $id;
         \R::store($user);
-
-        Router::redirect('/favorites');        
+        Router::redirect('/');        
        
     }
 
@@ -93,7 +92,7 @@ class Auth
             $user->avatar = "/" . $path;
             $user->password = password_hash($password, PASSWORD_DEFAULT);
             $user->group = 1;
-            $user->favorites = "";
+            $user->favorites = 1;
             \R::store($user);
             Router::redirect('/login');
         }else{
