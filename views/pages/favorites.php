@@ -32,7 +32,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="true"
+                        data-bs-target="#panelsStayOpen-collapse<?= $article->id ?>" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapse<?= $article->id ?>"
                         style="display:inline-block !important;">
                         <div style="float:left;"><strong><?= $article->article_header ?></strong></div>
