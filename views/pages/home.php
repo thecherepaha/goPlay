@@ -33,14 +33,14 @@
                 <h2 class="accordion-header" id="heading">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <?= $category->article_category ?>
+                        <?= $category ?>
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <?php foreach($articles as $article){
-                            if($article->article_category === $category->article_category){
+                            if($article->article_category === $category){
                         ?>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
