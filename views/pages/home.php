@@ -28,16 +28,15 @@
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <?php 
                 foreach($categories as $category){
-                    print_r($category);
                     ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        data-bs-target="#collapse<?= $category["article_category"] ?>" aria-expanded="true" aria-controls="collapse<?= $category["article_category"] ?>">
                         <?= $category["article_category"] ?>
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                <div id="collapse<?= $category["article_category"] ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $category["article_category"] ?>"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <?php foreach($articles as $article){
