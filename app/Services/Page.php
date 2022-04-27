@@ -9,11 +9,11 @@ class Page
     }
 
     public static function class($article_class){
-            if($_SESSION["user"]["favorites"] == $article->id){
-            $class = "btn-primary";
-        }else{
-            $class = "btn-outline-primary"; 
-        }
+            if($_SESSION["user"]["favorites"] == $article_class){
+                $class = "btn-primary";
+            }else{
+                $class = "btn-outline-primary"; 
+            }
         return $class;
     }
 
