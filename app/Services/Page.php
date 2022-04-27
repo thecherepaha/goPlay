@@ -19,6 +19,6 @@ class Page
 
     public static function likes($article){
         $likes = \R::find('users',' favorites = ?', [$article]); 
-        return count($likes);
+        return count($likes)+1;
     }
 }
