@@ -9,11 +9,9 @@
         $articles = \R::find( 'articles');
     }
 
-    $categories = \R::$f->begin()
-    ->select(' DISTINCT article_category ') 
-    ->from('articles');
+    $test = R::findAll("articles")->addSQL('SELECT DISTINCT article_category');
 
-    print_r($categories);
+    print_r($test);
     
 ?>
 
