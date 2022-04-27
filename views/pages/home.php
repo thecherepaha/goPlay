@@ -41,12 +41,8 @@
                                 <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id" />
                                 <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id" />
                             </div>
-                            <?php 
-                       
-                                if($_SESSION["user"]["favorites"] == $article->id){
-                                $class = "btn-primary";}else{$class = "btn-outline-primary"; }
-                            ?>
-                            <button type="submit" class="btn <?= $class ?>">
+                            
+                            <button type="submit" class="btn <?= Page::class($article->id); ?>">
                                 likes <span class="badge bg-secondary"><?php Page::likes($article->id); ?></span>
                             </button>
             
