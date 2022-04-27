@@ -9,7 +9,7 @@
         $articles = \R::find( 'articles');
     }
 
-    $test = R::findAll("articles")->addSQL('SELECT DISTINCT article_category');
+    $test = \R::findAll("articles")->addSQL('SELECT DISTINCT article_category');
     
 ?>
 
