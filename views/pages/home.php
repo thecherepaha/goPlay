@@ -7,6 +7,7 @@
         $articles = \R::find( 'articles', ' article_author LIKE ? ', [$user]);
     }else{
         $articles = \R::find( 'articles');
+        $categories = \R::getAll( 'select distinct article_category from articles' );
     }
 ?>
 
@@ -22,6 +23,7 @@
     <?php
         Page::part('navbar');
     ?>
+    <?php var_dump($categories) ?>;
     <div class="container mt-3">
 
         <div class="accordion" id="accordionPanelsStayOpenExample">
