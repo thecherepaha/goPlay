@@ -30,13 +30,15 @@
                 foreach($categories as $category){
                     ?>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="heading">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                <h2 class="accordion-header" id="heading<?= $category["article_category"] ?>">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse<?= $category["article_category"] ?>" aria-expanded="false" aria-controls="collapse<?= $category["article_category"] ?>">
-                        <?= $category["article_category"] ?>
+                        Accordion Item #2
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapse<?= $category["article_category"] ?>" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading<?= $category["article_category"] ?>">
+                <div id="panelsStayOpen-collapse<?= $category["article_category"] ?>"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-heading<?= $category["article_category"] ?>">
                     <div class="accordion-body">
                         <?php foreach($articles as $article){
                             if($article->article_category === $category["article_category"]){
