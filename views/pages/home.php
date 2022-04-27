@@ -10,7 +10,7 @@
     }
 
     $test = \R::findAll("articles")->addSQL('SELECT DISTINCT article_category');
-    
+    print_r()
 ?>
 
 <!doctype html>
@@ -31,7 +31,7 @@
             <?php
                 foreach($articles as $article){
                     ?>
-            <div class="accordion-item">
+            <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="heading">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -49,7 +49,7 @@
                         does limit overflow.
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
