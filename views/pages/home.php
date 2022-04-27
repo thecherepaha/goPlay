@@ -41,11 +41,11 @@
                                 <input type="text" value="<?= $article->id ?>" id="article_id" name="article_id" />
                                 <input type="text" value="<?= $_SESSION["user"]["id"] ?>" id="user_id" name="user_id" />
                             </div>
-                            
+
                             <button type="submit" class="btn <?= Page::class($article->id); ?>">
                                 likes <span class="badge bg-secondary"><?= Page::likes($article->id); ?></span>
                             </button>
-            
+
                         </form>
                         <div style="float:right;">Author: <code><?= $article->article_author ?></code></div>
                     </button>
@@ -54,7 +54,20 @@
                     aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
                     <div class="accordion-body">
                         <em><?= $article->article_content ?></em>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active">
+                                <?= $article->article_author ?>
+                            </a>
+                            <?php $participants = \R::find('users',' favorites = ?', [$article->id]); 
+                                foreach($participants as $participant){
+                                    ?>
+                            <a href="#" class="list-group-item list-group-item-action"><?= $participant->fullname ?></a>
+
+                        </div>
                     </div>
+                    <?php 
+                                }
+                                ?>
                 </div>
             </div>
             <?php
