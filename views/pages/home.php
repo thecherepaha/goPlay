@@ -28,7 +28,7 @@
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <?php 
                 foreach($categories as $category){
-                    print_r($category["article_category"]);
+                    print_r($category->article_category);
                     ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading">
