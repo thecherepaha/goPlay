@@ -10,8 +10,6 @@
     }
 
     $test = R::findAll("articles")->addSQL('SELECT DISTINCT article_category');
-
-    print_r($test);
     
 ?>
 
