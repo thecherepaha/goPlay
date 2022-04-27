@@ -14,9 +14,9 @@ class Page
         }else{
             $class = "btn-outline-primary"; 
         }
-        echo $class;
+        return $class;
     }
-    
+
     public static function likes($article){
         $likes = \R::find('users',' favorites = ?', [$article]); 
         echo count($likes);
