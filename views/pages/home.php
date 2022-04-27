@@ -10,7 +10,7 @@
     }
 
     $categories = \R::$f->begin()
-    ->addSQL(' SELECT DISTINCT article_category ') 
+    ->select(' DISTINCT article_category ') 
     ->from('articles');
 
     print_r($categories);
