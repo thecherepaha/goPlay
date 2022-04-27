@@ -26,6 +26,12 @@
                 <label for="article_header" class="form-label">Article Name</label>
                 <input type="text" name="article_header" class="form-control" id="article_header">
             </div>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id = "category" name="category">
+                <option selected>Open this select menu</option>
+                <option value="Volleyball">Volleyball</option>
+                <option value="Football">Football</option>
+                <option value="Basketball">Basketball</option>
+            </select>
             <div class="mb-3">
                 <label for="article_content" class="form-label">Article Content</label>
                 <textarea type="text" name="article_content" class="form-control" id="article_content"></textarea>

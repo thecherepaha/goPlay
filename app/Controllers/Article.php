@@ -10,6 +10,8 @@ class Article
 
         $article_header = $data["article_header"];
         $article_content = $data["article_content"];
+        $article_category = $data["category"];
+
         if($article_header === "" || $article_content === ""){
             die('fill all inputs');
         }
@@ -17,6 +19,7 @@ class Article
         $article  = \R::dispense('articles');
         $article->article_header = $article_header;
         $article->article_content = $article_content;
+        $article->article_category = $article_category;
         $article->article_author = $_SESSION["user"]["fullname"];
         \R::store($article);
 
