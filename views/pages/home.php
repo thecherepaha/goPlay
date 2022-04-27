@@ -43,7 +43,7 @@
                             </div>
 
                             <button type="submit" class="btn <?= Page::class($article->id); ?>">
-                                Participants <span class="badge bg-secondary"><?= Page::likes($article->id); ?></span>
+                                Participants <span class="badge bg-secondary"><?= Page::likes($article->id, $article->article_author); ?></span>
                             </button>
 
                         </form>
