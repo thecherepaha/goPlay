@@ -36,8 +36,7 @@
                         <?= $category["article_category"] ?>
                     </button>
                 </h2>
-                <div id="collapse<?= $category["article_category"] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $category["article_category"] ?>"
-                    data-bs-parent="#accordionExample">
+                <div id="panelsStayOpen-collapse<?= $category["article_category"] ?>" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading<?= $category["article_category"] ?>">
                     <div class="accordion-body">
                         <?php foreach($articles as $article){
                             if($article->article_category === $category["article_category"]){
