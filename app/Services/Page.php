@@ -17,8 +17,14 @@ class Page
         return $class;
     }
 
-    public static function likes($article){
-        $likes = \R::find('users',' favorites = ?', [$article]); 
+    public static function likes($article_id, $article_author){
+        $likes = \R::find('users',' favorites = ?', [$article_id]); 
+        $logic = false;
+        foreach($likes as $like){
+            if($like->fullname === $article_author){
+                return count($likes);
+            }
+        }
         return count($likes)+1;
     }
 }
