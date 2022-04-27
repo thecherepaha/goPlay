@@ -22,8 +22,6 @@
     <?php
         Page::part('navbar');
     ?>
-    <?php $test = \R::findAll("articles")->addSQL('SELECT DISTINCT article_category');
-    print_r($test); ?>
     <div class="container mt-3">
 
         <div class="accordion" id="accordionPanelsStayOpenExample">
