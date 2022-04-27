@@ -28,7 +28,6 @@
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <?php 
                 foreach($categories as $category){
-                    print_r($category->article_category);
                     ?>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading">
@@ -41,7 +40,7 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <?php foreach($articles as $article){
-                            if($article->article_category === $category){
+                            if($article->article_category === $category["article_category"]){
                         ?>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-heading<?= $article->id ?>">
