@@ -53,16 +53,19 @@
                 <div id="panelsStayOpen-collapse<?= $article->id ?>" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
                     <div class="accordion-body">
-                        
+
                         <div class="list-group">
                             <a href="#" class="list-group-item list-group-item-action active">
                                 <?= $article->article_author ?>
                             </a>
                             <?php $participants = \R::find('users',' favorites = ?', [$article->id]); 
                                 foreach($participants as $participant){
+                                    if($article->article_author !== $participant->fullname){
+
                                     ?>
-                                <a href="#" class="list-group-item list-group-item-action"><?= $participant->fullname ?></a>
+                                    <a href="#" class="list-group-item list-group-item-action"><?= $participant->fullname ?></a>
                             <?php
+                                    }
                                 }
                                 ?>
 
