@@ -33,7 +33,7 @@
                 <h2 class="accordion-header" id="heading<?= $category["article_category"] ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse<?= $category["article_category"] ?>" aria-expanded="false" aria-controls="collapse<?= $category["article_category"] ?>">
-                        Accordion Item #2
+                        <?= $category["article_category"] ?>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapse<?= $category["article_category"] ?>"
