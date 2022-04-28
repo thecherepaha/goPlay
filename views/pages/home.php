@@ -70,7 +70,7 @@
                             </h2>
                             <div id="panelsStayOpen-collapse<?= $article->id ?>" class="accordion-collapse collapse"
                                 aria-labelledby="panelsStayOpen-heading<?= $article->id ?>">
-                                <div class="accordion-body">
+                                <div class="accordion-body w-50">
 
                                     <div class="list-group">
                                         <a href="#" class="list-group-item list-group-item-action active">
